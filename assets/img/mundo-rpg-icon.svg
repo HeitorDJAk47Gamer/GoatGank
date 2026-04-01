@@ -1,0 +1,29 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgRpg" x1="180" y1="120" x2="850" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D0F62"/>
+      <stop offset="0.55" stop-color="#5D1EA8"/>
+      <stop offset="1" stop-color="#9645F0"/>
+    </linearGradient>
+    <linearGradient id="dice" x1="360" y1="330" x2="670" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4E5FF"/>
+      <stop offset="1" stop-color="#C48CFF"/>
+    </linearGradient>
+    <filter id="rpgGlow" x="80" y="80" width="864" height="864" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#A45FFF" flood-opacity="0.55"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="40" flood-color="#7E2CE0" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect x="128" y="128" width="768" height="768" rx="210" fill="url(#bgRpg)" filter="url(#rpgGlow)"/>
+
+  <rect x="300" y="300" width="420" height="420" rx="98" fill="url(#dice)"/>
+
+  <circle cx="410" cy="410" r="28" fill="#6B23C3"/>
+  <circle cx="610" cy="410" r="28" fill="#6B23C3"/>
+  <circle cx="510" cy="510" r="28" fill="#6B23C3"/>
+  <circle cx="410" cy="610" r="28" fill="#6B23C3"/>
+  <circle cx="610" cy="610" r="28" fill="#6B23C3"/>
+
+  <path d="M258 790C340 736 424 706 512 706C600 706 684 736 766 790" stroke="#F2DFFF" stroke-width="28" stroke-linecap="round"/>
+</svg>
