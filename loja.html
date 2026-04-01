@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GGK Loja | Merch Oficial</title>
+    <meta name="description" content="Loja oficial da Goat Gank com camisetas, canecas, chaveiros e acessórios." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container top-nav">
+        <a class="brand" href="index.html" aria-label="Goat Gank">
+          <img class="brand-logo" src="assets/img/ggk-logo.png" alt="Logo GGK" />
+          <span class="brand-text">G<span>G</span>K</span>
+        </a>
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="loja.html">Loja</a>
+          <a data-nav href="sobre.html">Sobre</a>
+          <a data-nav href="equipe.html">Equipe</a>
+          <a data-nav href="projetos.html">Projetos</a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema"></button>
+          <button
+            class="menu-toggle"
+            type="button"
+            data-menu-toggle
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <nav class="container mobile-nav" data-mobile-nav aria-label="Navegação mobile">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="loja.html">Loja</a>
+        <a data-nav href="sobre.html">Sobre</a>
+        <a data-nav href="equipe.html">Equipe</a>
+        <a data-nav href="projetos.html">Projetos</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container" data-reveal>
+        <span class="eyebrow">GGK Merch</span>
+        <h1 class="section-title">Loja da Comunidade</h1>
+        <p class="section-lead">
+          Camisetas, chaveiros, canecas e acessórios para representar a Goat Gank dentro e fora das partidas.
+        </p>
+      </section>
+
+      <section class="container" data-reveal>
+        <div class="shop-controls">
+          <input class="search-input" type="search" placeholder="Buscar produto..." data-shop-search />
+          <div class="category-filters">
+            <button class="filter-btn active" type="button" data-filter="todos">Todos</button>
+            <button class="filter-btn" type="button" data-filter="camisetas">Camisetas</button>
+            <button class="filter-btn" type="button" data-filter="canecas">Canecas</button>
+            <button class="filter-btn" type="button" data-filter="chaveiros">Chaveiros</button>
+            <button class="filter-btn" type="button" data-filter="acessorios">Acessórios</button>
+          </div>
+        </div>
+
+        <div class="shop-grid" data-product-grid></div>
+        <p class="muted-line">Catálogo em versão inicial. Checkout e carrinho podem ser conectados depois.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span data-year></span> Goat Gank (GGK). Loja em expansão.</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="sobre.html">Sobre</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
