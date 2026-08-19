@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projetos GGK | Iniciativas Internas</title>
+    <meta property="og:title" content="GGK | We Are Goat" />
+    <meta property="og:description" content="Goat Gank (GGK): comunidade de amigos e games no Discord." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/ggk-logosemfundo.png" />
     <meta
       name="description"
-      content="Conheca os projetos internos da Goat Gank, incluindo artes, clube do livro, biblioteca virtual e mundo RPG."
+      content="Conheça os projetos internos da Goat Gank, incluindo artes, clube do livro, biblioteca virtual e mundo RPG."
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
@@ -17,7 +21,7 @@
           <img class="brand-logo" src="assets/img/ggk-logosemfundo.png" alt="Logo GGK" />
           <span class="brand-text">G<span>G</span>K</span>
         </a>
-        <nav class="nav-links" aria-label="Navegacao principal">
+        <nav class="nav-links" aria-label="Navegação principal">
           <a data-nav href="index.html">Home</a>
           <a data-nav href="loja.html">Loja</a>
           <a data-nav href="sobre.html">Sobre</a>
@@ -26,18 +30,10 @@
         </nav>
         <div class="header-actions">
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema"></button>
-          <button
-            class="menu-toggle"
-            type="button"
-            data-menu-toggle
-            aria-label="Abrir menu"
-            aria-expanded="false"
-          >
-            &#9776;
-          </button>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-label="Abrir menu" aria-expanded="false">☰</button>
         </div>
       </div>
-      <nav class="container mobile-nav" data-mobile-nav aria-label="Navegacao mobile">
+      <nav class="container mobile-nav" data-mobile-nav aria-label="Navegação mobile">
         <a data-nav href="index.html">Home</a>
         <a data-nav href="loja.html">Loja</a>
         <a data-nav href="sobre.html">Sobre</a>
@@ -51,25 +47,26 @@
         <span class="eyebrow">Projetos internos</span>
         <h1 class="section-title">Ecossistema GGK</h1>
         <p class="section-lead">
-          Projetos criados pela comunidade para fortalecer aprendizado, organizacao e experiencias dentro do servidor.
+          Projetos criados pela comunidade para fortalecer aprendizado, organização e experiências dentro do servidor.
         </p>
       </section>
 
       <section class="container project-grid" data-reveal>
         <article class="project-card">
           <div class="project-cover">
-            <img src="assets/img/central-arts-icon.svg" alt="Icone do projeto Central arts" />
+            <img src="assets/img/central-arts-icon.svg" alt="Ícone do projeto Central arts" />
           </div>
           <span class="pill">Criatividade</span>
           <h3>Central arts</h3>
           <p>
-            Area reservada para publicar artes, animacoes e esbocos. Tambem e um local para interagir com pessoas que
+            Área reservada para publicar artes, animações e esboços. Também é um local para interagir com pessoas que
             possuem os mesmos interesses criativos.
           </p>
           <div class="project-actions">
             <a class="ghost-link" href="https://discord.com/invite/goat-gank-1044599844343382066" target="_blank" rel="noreferrer">
               Entrar no canal
             </a>
+            <button class="ghost-link" onclick="openModal('Central Arts', 'A Central Arts visa não apenas expor, mas ensinar. Membros com mais experiência costumam dar feedback e ajudar iniciantes. Junte-se a nós no servidor para começar a compartilhar!')">Ver Detalhes</button>
           </div>
         </article>
 
@@ -80,32 +77,49 @@
           <span class="pill">Leitura</span>
           <h3>Clube do Livro</h3>
           <p>
-            Voltado a leitura e discussao sobre obras da literatura geral, com ambiente amigavel e eventos de conversa
-            sobre experiencias. A Biblioteca Virtual faz parte desse projeto para organizar e disponibilizar livros aos
-            usuarios GGK.
+            Voltado à leitura e discussão sobre obras da literatura geral, com ambiente amigável e eventos de conversa
+            sobre experiências. A Biblioteca Virtual faz parte desse projeto.
           </p>
           <div class="project-actions">
             <a class="ghost-link" href="https://livros-drives.vercel.app/" target="_blank" rel="noreferrer">
               Abrir Biblioteca Virtual
             </a>
+            <button class="ghost-link" onclick="openModal('Clube do Livro', 'A cada mês, os membros escolhem um título para ler juntos e debater em call no final do ciclo. Nossa Biblioteca Virtual tem um acervo gigante para apoiar esse projeto!')">Ver Detalhes</button>
           </div>
         </article>
 
         <article class="project-card">
           <div class="project-cover">
-            <img src="assets/img/mundo-rpg-icon.svg" alt="Icone do projeto Mundo RPG" />
+            <img src="assets/img/mundo-rpg-icon.svg" alt="Ícone do projeto Mundo RPG" />
           </div>
           <span class="pill">Comunidade</span>
           <h3>Mundo RPG</h3>
           <p>
-            Categoria completamente voltada a RPGs, mesas, eventos de mestragem, jogatinas em grupo e divulgacao de
-            mesas. Aqui mestres e jogadores possuem uma ponte de contato para comunicacao e interacao social mais
-            dinamica.
+            Categoria completamente voltada a RPGs, mesas, eventos de mestragem, jogatinas em grupo e divulgação de
+            mesas.
           </p>
           <div class="project-actions">
             <a class="ghost-link" href="https://discord.com/invite/goat-gank-1044599844343382066" target="_blank" rel="noreferrer">
-              Ver categoria no Discord
+              Ver categoria
             </a>
+            <button class="ghost-link" onclick="openModal('Mundo RPG', 'Temos bots de rolagem de dados e canais de texto separados para anotações e fichas. Não importa o sistema (D&D, Ordem Paranormal, Call of Cthulhu), sempre tem uma mesa rolando.')">Ver Detalhes</button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover" style="background: #07141c; display: flex; align-items: center; justify-content: center;">
+            <img src="https://voiceup.shardweb.app/assets/voiceup-logo.png" alt="Logo do projeto VoiceUP" style="width: 80px; height: 80px; min-height: unset; margin: 55px 0;" />
+          </div>
+          <span class="pill">Software</span>
+          <h3>VoiceUP</h3>
+          <p>
+            Programa de comunicação próprio da GGK. Oferece voz, vídeo, tela e texto sem assinaturas, com suporte a plugins e servidores privados (ServerHost).
+          </p>
+          <div class="project-actions">
+            <a class="ghost-link" href="https://voiceup.shardweb.app/" target="_blank" rel="noreferrer">
+              Site Oficial
+            </a>
+            <button class="ghost-link" onclick="openModal('VoiceUP', 'O VoiceUP é a nossa própria plataforma de voz e vídeo. Ele é super leve, não cobra por funções premium e permite que você rode plugins como Bots de Música ou Rolagem de Dados RPG direto no seu PC!')">Ver Detalhes</button>
           </div>
         </article>
       </section>
@@ -114,7 +128,7 @@
         <h2 class="section-title">Roadmap da Comunidade</h2>
         <div class="project-tabs">
           <button class="tab-btn active" type="button" data-tab="agora">Agora</button>
-          <button class="tab-btn" type="button" data-tab="proximo">Proximo</button>
+          <button class="tab-btn" type="button" data-tab="proximo">Próximo</button>
           <button class="tab-btn" type="button" data-tab="futuro">Futuro</button>
         </div>
 
@@ -124,20 +138,20 @@
         </article>
 
         <article class="tab-panel highlight-box" data-panel="proximo">
-          <h3>Proxima etapa</h3>
-          <p>Novos eventos tematicos com desafios de arte, leitura guiada e calendarios de mesas.</p>
+          <h3>Próxima etapa</h3>
+          <p>Novos eventos temáticos com desafios de arte, leitura guiada e calendários de mesas.</p>
         </article>
 
         <article class="tab-panel highlight-box" data-panel="futuro">
-          <h3>Visao futura</h3>
-          <p>Hub GGK de projetos com integracoes, conteudo colaborativo e acompanhamento comunitario.</p>
+          <h3>Visão futura</h3>
+          <p>Hub GGK de projetos com integrações, conteúdo colaborativo e acompanhamento comunitário.</p>
         </article>
       </section>
     </main>
 
     <footer class="footer">
       <div class="container footer-inner">
-        <p>&copy; <span data-year></span> Goat Gank (GGK). Projetos em constante evolucao.</p>
+        <p>&copy; <span data-year></span> Goat Gank (GGK). Projetos em constante evolução.</p>
         <div class="footer-links">
           <a href="index.html">Home</a>
           <a href="loja.html">Loja</a>
@@ -145,6 +159,12 @@
         </div>
       </div>
     </footer>
+
+    <button class="back-to-top" data-back-to-top aria-label="Voltar ao topo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
 
     <script src="assets/js/main.js"></script>
   </body>

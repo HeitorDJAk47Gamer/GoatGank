@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GGK | We Are Goat</title>
-    <meta
-      name="description"
-      content="Goat Gank (GGK): comunidade de amigos e games no Discord para jogar, socializar e criar projetos juntos."
-    />
+    <meta property="og:title" content="GGK | We Are Goat" />
+    <meta property="og:description" content="Goat Gank (GGK): comunidade de amigos e games no Discord." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/ggk-logosemfundo.png" />
+    <meta name="description" content="Goat Gank (GGK): comunidade de amigos e games no Discord para jogar, socializar e criar projetos juntos." />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -28,15 +29,7 @@
 
         <div class="header-actions">
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema"></button>
-          <button
-            class="menu-toggle"
-            type="button"
-            data-menu-toggle
-            aria-label="Abrir menu"
-            aria-expanded="false"
-          >
-            ☰
-          </button>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-label="Abrir menu" aria-expanded="false">☰</button>
         </div>
       </div>
       <nav class="container mobile-nav" data-mobile-nav aria-label="Navegação mobile">
@@ -73,8 +66,7 @@
       <section class="container" data-reveal>
         <h2 class="section-title">Conexão Real Entre Amigos</h2>
         <p class="section-lead">
-          Mais que um servidor de jogo: somos uma comunidade ativa com eventos, calls, jogatinas, desenvolvimento de
-          bots e iniciativas para aproximar todo mundo.
+          Mais que um servidor de jogo: somos uma comunidade ativa com eventos, calls, jogatinas, desenvolvimento de bots e iniciativas para aproximar todo mundo.
         </p>
         <div class="feature-grid">
           <article class="card">
@@ -96,24 +88,63 @@
       </section>
 
       <section class="container" data-reveal>
-        <div class="stats-grid">
-          <article class="stat-card">
-            <strong>24/7</strong>
-            <span>Comunidade ativa no Discord</span>
+        <h2 class="section-title">O que dizem sobre nós</h2>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p class="testimonial-text">"Achei meu squad fixo aqui! A galera é muito receptiva e todo dia tem call rolando de algum jogo."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">A</div>
+              <strong>Membro Ativo</strong>
+            </div>
           </article>
-          <article class="stat-card">
-            <strong>5+</strong>
-            <span>Canais com foco em jogos e papo</span>
-          </article>
-          <article class="stat-card">
-            <strong>∞</strong>
-            <span>Possibilidades de amizades</span>
-          </article>
-          <article class="stat-card">
-            <strong>GGK</strong>
-            <span>Identidade forte e colaborativa</span>
+          <article class="testimonial-card">
+            <p class="testimonial-text">"A comunidade é muito foda. Os projetos internos, tipo os bots e a lojinha, são um diferencial enorme."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">G</div>
+              <strong>Goat Veterano</strong>
+            </div>
           </article>
         </div>
+      </section>
+
+      <section class="container" data-reveal style="margin-top: 4rem;">
+        <h2 class="section-title">Últimas Notícias</h2>
+        <p class="section-lead">Fique por dentro das atualizações do servidor GGK.</p>
+        <div class="news-list">
+          <article class="news-item">
+            <span class="news-date">Hoje</span>
+            <div class="news-content">
+              <strong>Novo site no ar!</strong>
+              <p style="margin:0; color: var(--text-soft); font-size: 0.9rem;">O site oficial da Goat Gank foi redesenhado com novas funções.</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <span class="news-date">Aviso</span>
+            <div class="news-content">
+              <strong>Campeonato Interno</strong>
+              <p style="margin:0; color: var(--text-soft); font-size: 0.9rem;">Em breve anunciaremos o próximo campeonato no canal de anúncios.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="container stats-grid" data-reveal style="margin-top: 4rem;">
+        <article class="stat-card">
+          <strong>24/7</strong>
+          <span>Comunidade ativa</span>
+        </article>
+        <article class="stat-card">
+          <strong>5+</strong>
+          <span>Canais focados</span>
+        </article>
+        <article class="stat-card">
+          <strong>∞</strong>
+          <span>Amizades</span>
+        </article>
+        <article class="stat-card">
+          <strong>GGK</strong>
+          <span>Identidade colaborativa</span>
+        </article>
       </section>
 
       <section
@@ -122,6 +153,7 @@
         data-discord-section
         data-guild-id="1044599844343382066"
         data-invite-code="https://discord.com/invite/goat-gank-1044599844343382066"
+        style="margin-top: 4rem;"
       >
         <h2 class="section-title">Status do Servidor</h2>
         <p class="section-lead">
@@ -138,7 +170,7 @@
           </article>
           <article class="stat-card">
             <strong data-discord-channels>--</strong>
-            <span>Canais visiveis (+)</span>
+            <span>Canais visíveis (+)</span>
           </article>
           <article class="stat-card">
             <strong data-discord-voice>--</strong>
@@ -146,7 +178,7 @@
           </article>
         </div>
         <p class="muted-line server-note" data-discord-note>
-          Configure `data-guild-id` e `data-invite-code` em `index.html` para ativar os dados.
+          Aguardando conexão com a API do Discord...
         </p>
       </section>
     </main>
@@ -161,6 +193,12 @@
         </div>
       </div>
     </footer>
+
+    <button class="back-to-top" data-back-to-top aria-label="Voltar ao topo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
 
     <script src="assets/js/main.js"></script>
   </body>

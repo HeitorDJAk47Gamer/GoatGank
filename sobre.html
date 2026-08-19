@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre a GGK | Comunidade</title>
-    <meta
-      name="description"
-      content="Conheça a história da Goat Gank, comunidade focada em amizade, games e projetos colaborativos."
-    />
+    <meta property="og:title" content="GGK | We Are Goat" />
+    <meta property="og:description" content="Goat Gank (GGK): comunidade de amigos e games no Discord." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/ggk-logosemfundo.png" />
+    <meta name="description" content="Conheça a história da Goat Gank, comunidade focada em amizade, games e projetos colaborativos." />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -26,15 +27,7 @@
         </nav>
         <div class="header-actions">
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema"></button>
-          <button
-            class="menu-toggle"
-            type="button"
-            data-menu-toggle
-            aria-label="Abrir menu"
-            aria-expanded="false"
-          >
-            ☰
-          </button>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-label="Abrir menu" aria-expanded="false">☰</button>
         </div>
       </div>
       <nav class="container mobile-nav" data-mobile-nav aria-label="Navegação mobile">
@@ -51,8 +44,7 @@
         <span class="eyebrow">Nossa essência</span>
         <h1 class="section-title">Sobre a Goat Gank</h1>
         <p class="section-lead">
-          A GGK é uma comunidade de Discord criada para unir pessoas em torno de games, amizade e colaboração.
-          Crescemos com foco em respeito, diversão e projetos que fortalecem a experiência de todos os membros.
+          A GGK é uma comunidade de Discord criada para unir pessoas em torno de games, amizade e colaboração. Crescemos com foco em respeito, diversão e projetos que fortalecem a experiência de todos os membros.
         </p>
       </section>
 
@@ -73,7 +65,7 @@
         </div>
       </section>
 
-      <section class="container split" data-reveal>
+      <section class="container split" data-reveal style="margin-top: 4rem;">
         <div>
           <h2 class="section-title">Linha do Tempo</h2>
           <div class="timeline">
@@ -95,6 +87,25 @@
           <img src="assets/img/sib-banner.png" alt="Projeto interno SIB em arte noturna roxa" />
         </div>
       </section>
+
+      <section class="container" data-reveal style="margin-top: 5rem;">
+        <h2 class="section-title">Galeria de Memórias</h2>
+        <p class="section-lead">Alguns momentos registrados pela nossa comunidade. (Imagens ilustrativas)</p>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600" alt="Jogatina 1" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=600" alt="Jogatina 2" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=600" alt="Jogatina 3" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&q=80&w=600" alt="Jogatina 4" loading="lazy" />
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -107,6 +118,12 @@
         </div>
       </div>
     </footer>
+
+    <button class="back-to-top" data-back-to-top aria-label="Voltar ao topo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
 
     <script src="assets/js/main.js"></script>
   </body>

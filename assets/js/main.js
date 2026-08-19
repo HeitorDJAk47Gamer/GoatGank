@@ -110,7 +110,7 @@ function renderProducts(list) {
         <h3>${product.name}</h3>
         <div class="shop-meta">
           <span class="shop-price">${product.price}</span>
-          <button class="ghost-link" type="button">Em breve</button>
+          <button class="ghost-link" type="button" onclick="openModal('Comprar ${product.name}', 'Para adquirir este item, tire um print ou mencione o nome <strong>${product.name}</strong> lá no canal <strong style=\\'color: var(--accent-strong);\\'>#compras</strong> no Discord da Goat Gank! Um administrador entrará em contato.')">Comprar</button>
         </div>
       </article>
     `
@@ -258,12 +258,9 @@ async function fetchWidgetStats(guildId) {
 
   const data = await response.json();
   const channels = Array.isArray(data?.channels) ? data.channels : [];
-  const voiceCount = channels.reduce((total, channel) => {
-    if (Array.isArray(channel?.members)) {
-      return total + channel.members.length;
-    }
-    return total;
-  }, 0);
+  const members = Array.isArray(data?.members) ? data.members : [];
+  
+  const voiceCount = members.filter(member => member.channel_id).length;
 
   return {
     channelCount: channels.length,
@@ -335,3 +332,64 @@ if (discordSection) {
 }
 
 initTheme();
+// --- NOVAS MELHORIAS JS ---
+
+// Lógica Botão Voltar ao Topo
+const backToTopBtn = document.querySelector('[data-back-to-top]');
+if (backToTopBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Lógica de Modais
+function openModal(title, content) {
+  let overlay = document.querySelector('.modal-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.innerHTML = `
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Fechar">&times;</button>
+        <h3 class="modal-title" style="margin-top:0; font-family: var(--font-display); font-size: 2rem;"></h3>
+        <div class="modal-body" style="margin-top: 1rem; color: var(--text-soft);"></div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    overlay.querySelector('.modal-close').addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) overlay.classList.remove('active');
+    });
+  }
+
+  overlay.querySelector('.modal-title').textContent = title;
+  overlay.querySelector('.modal-body').innerHTML = content;
+  
+  // Pequeno delay para a animação CSS disparar
+  requestAnimationFrame(() => {
+    overlay.classList.add('active');
+  });
+}
+
+// Easter Egg GOAT
+let keys = '';
+const konami = 'goat';
+window.addEventListener('keydown', (e) => {
+  keys += e.key.toLowerCase();
+  if (keys.length > 4) {
+    keys = keys.slice(-4);
+  }
+  if (keys === konami) {
+    document.body.classList.toggle('goat-mode');
+  }
+});

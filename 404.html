@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Não Encontrada | GGK</title>
+    <meta name="description" content="A página que você está procurando não existe na Goat Gank." />
+    
+    <meta property="og:title" content="Página Não Encontrada | GGK" />
+    <meta property="og:description" content="A página que você está procurando não existe na Goat Gank." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/ggk-logosemfundo.png" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container top-nav">
+        <a class="brand" href="index.html" aria-label="Goat Gank">
+          <img class="brand-logo" src="assets/img/ggk-logosemfundo.png" alt="Logo GGK" />
+          <span class="brand-text">G<span>G</span>K</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="loja.html">Loja</a>
+          <a data-nav href="sobre.html">Sobre</a>
+          <a data-nav href="equipe.html">Equipe</a>
+          <a data-nav href="projetos.html">Projetos</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema"></button>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-label="Abrir menu" aria-expanded="false">
+            ☰
+          </button>
+        </div>
+      </div>
+      <nav class="container mobile-nav" data-mobile-nav aria-label="Navegação mobile">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="loja.html">Loja</a>
+        <a data-nav href="sobre.html">Sobre</a>
+        <a data-nav href="equipe.html">Equipe</a>
+        <a data-nav href="projetos.html">Projetos</a>
+      </nav>
+    </header>
+
+    <main class="page-404">
+      <section class="container hero" style="grid-template-columns: 1fr; text-align: center; justify-items: center; min-height: 50vh;">
+        <div data-reveal>
+          <span class="eyebrow">Erro 404</span>
+          <h1 style="font-size: clamp(4rem, 12vw, 8rem);">GG<span>K</span></h1>
+          <p style="margin-left: auto; margin-right: auto; margin-bottom: 2rem;">
+            Parece que você se perdeu no servidor! A página que você tentou acessar não existe ou foi movida.
+          </p>
+          <a class="cta-primary" href="index.html">Voltar para a Home</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span data-year></span> Goat Gank (GGK). We Are Goat.</p>
+        <div class="footer-links">
+          <a href="sobre.html">Sobre</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="loja.html">Loja</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" data-back-to-top aria-label="Voltar ao topo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
